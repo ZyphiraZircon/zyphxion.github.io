@@ -60,22 +60,6 @@ a.expand, a.expand:hover, a.expand:visited {
 	transition:background-color 0.25s;
 }
 
-a.image, a.image:hover, a.image:visited {
-	color:#ffffff;
-	display:inline-block;
-	padding:5px 10px;
-	margin-top:10px;
-	background-color:#FFFFFF;
-	font-weight:bold;
-	border-radius:2px;
-	font-size:16px;
-	text-decoration:none;
-	
-	-webkit-transition:background-color 0.25s;
-	-moz-transition:background-color 0.25s;
-	transition:background-color 0.25s;
-}
-
 a.normalize, a.normalize:visited{
 	color:#EF4D23;
 	background-color:#FFFFFF;
