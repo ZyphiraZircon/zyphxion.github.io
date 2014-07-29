@@ -26,14 +26,7 @@ body{
 	text-align:center;
 }
 
-a.normalize, a.normalize:visited{
-	color:#EF4D23;
-	background-color:#FFFFFF;
-}
-a.normalize:hover{
-	color:#515A5F;
-	background-color:#FFFFFF;
-}
+
 
 a, a:visited {
 	color:#ffffff;
@@ -54,6 +47,21 @@ a, a:visited {
 a:hover{
 	text-decoration:none;
 	color:#515A5F;
+}
+
+a.normalize, a.normalize:visited{
+	color:#EF4D23;
+	background-color:#FFFFFF;
+	font-weight:normal;
+	padding:0px;
+	margin:0px;
+}
+a.normalize:hover{
+	color:#515A5F;
+	background-color:#FFFFFF;
+	font-weight:normal;
+	padding:0px;
+	margin:0px;
 }
 
 a.broken, a.broken:visited {
