@@ -144,5 +144,7 @@ div.centerbuttons {
 	-webkit-backface-visibility: hidden;
 }
 
-
+div.summary {
+	text-align:left; 
+}
 
