@@ -1,6 +1,5 @@
 <div class="center">
 	<h3>Cost Estimate</h3><br>
-	email: {{data.email}}<br>
 	platform: {{data.platform}}<br>
 	customization: {{data.customization}}<br>
 	login: {{data.login}}<br>
@@ -15,7 +14,7 @@
 	stage: {{data.stage}}<br>
 	<h2>Estimated: ${{data.total}}</h2>
 	<a href="#/start" class='normalize' ng-click=""><i>Create another estimate</i></a><br><br>	
-	<a href="#" ng-model="collapsed" ng-click="collapsed=!collapsed"><strong>How does the estimator work?</strong></a>
+	<a href="" ng-model="collapsed" ng-click="collapsed=!collapsed"><strong>How does the estimator work?</strong></a>
     <div ng-show="collapsed">This estimated cost is a rough estimate based on the amount of time it will take to create your app. This utilizes a range of hourly rates from $60-$100 USD per hour (quality talent is typically in this range). This estimate could vary dependent on project scope and functionalities. For more information contact us at: <a href="mailto:info@keystoke.com" class='normalize' target="_top">info@keystoke.com</a></div>
 	<br>
 	<h3>Let's get started!</h3>
