@@ -72,6 +72,11 @@ keystokePageApp.config(function ($routeProvider) {
 			controller: 'DataController',
 			templateUrl:'partials/Total.html'
 		})
+		.when ('/thanks',
+		{
+			controller: 'DataController',
+			templateUrl:'partials/Thanks.html'
+		})
 		.otherwise({redirectTo: '/start' });
 });
 
@@ -86,3 +91,4 @@ keystokePageApp.controller('DataController', function($scope, Data) {
 		$scope.data.total += value;
 	}
 });
+

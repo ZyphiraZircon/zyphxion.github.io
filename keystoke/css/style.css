@@ -47,6 +47,10 @@ a:hover{
 	color:#515A5F;
 }
 
+a.normalize, a.normalize:visited, a.normalize:hover{
+	color:#EF4D23;
+}
+
 a.broken, a.broken:visited {
 	color:#ffffff;
 	display:inline-block;
