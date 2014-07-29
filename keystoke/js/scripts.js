@@ -75,9 +75,11 @@ keystokePageApp.config(function ($routeProvider) {
 		.otherwise({redirectTo: '/start' });
 });
 
-// keystokePageApp.service('DataService', function(){
-	// this.
+keystokePageApp.factory('Data', function () {
+	return {message:"I'm data from a service/factory"}
+})
 
-keystokePageApp.controller('DataController', function($rootScope) {
-	$rootScope.stuff = "Things?";
+
+keystokePageApp.controller('DataController', function($scope, Data) {
+	$scope.data = Data;
 });
