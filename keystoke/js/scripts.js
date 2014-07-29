@@ -77,7 +77,8 @@ keystokePageApp.config(function ($routeProvider) {
 			controller: 'DataController',
 			templateUrl:'partials/Thanks.html'
 		})
-		.otherwise({redirectTo: '/start' });
+		// .otherwise({redirectTo: '/start' })
+		;
 });
 
 keystokePageApp.factory('Data', function () {
