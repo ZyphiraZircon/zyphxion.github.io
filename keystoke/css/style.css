@@ -13,6 +13,8 @@
 	General Styles
 --------------------------*/
 
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
 html {
 	overflow-y: scroll;
 }
