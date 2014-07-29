@@ -29,7 +29,7 @@ a, a:visited {
 	display:inline-block;
 	padding:5px 10px;
 	margin:10px auto 3px;
-	background-color:#7094B8;
+	background-color:#EF4D23;
 	font-weight:bold;
 	border-radius:4px;
 	text-transform:uppercase;
@@ -43,7 +43,7 @@ a, a:visited {
 
 a:hover{
 	text-decoration:none;
-	background-color:#99B2CC;
+	color:#222222;
 }
 
 a.broken, a.broken:visited {
