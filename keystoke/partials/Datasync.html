@@ -1,6 +1,7 @@
 <div class="center">
 	Running total: ${{data.total}}<br><br>
 	<h3>Does the app need to sync data across other devices?</h3><br>
+	<div class="centerbuttons">
 	<a href="#/reviews" class="reviews" ng-click="data.datasync='Yes'; addTotal(12000)">Yes</a><br><br>
 	<a href="#/reviews" class="reviews" ng-click="data.datasync='No'; addTotal(0)">No</a><br><br>
 	<a href="#/reviews" class="reviews" ng-click="data.datasync='Not sure'; addTotal(4000)">Not sure</a><br><br>

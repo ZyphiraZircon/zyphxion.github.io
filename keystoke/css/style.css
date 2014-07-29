@@ -28,7 +28,7 @@ body{
 
 
 
-a, a:visited {
+a, a:hover, a:visited {
 	color:#ffffff;
 	display:inline-block;
 	padding:5px 10px;
@@ -42,11 +42,6 @@ a, a:visited {
 	-webkit-transition:background-color 0.25s;
 	-moz-transition:background-color 0.25s;
 	transition:background-color 0.25s;
-}
-
-a:hover{
-	text-decoration:none;
-	color:#515A5F;
 }
 
 a.normalize, a.normalize:visited{
@@ -104,13 +99,32 @@ h4 {
 	font-style:italic;
 }
 
-
-div.center {
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  height: auto;
-  top: 20%;
-  text-align: center;
-  position: fixed;
+div.headbar {
+	width: 100%;
+	padding:5px 10px;
+	margin:10px auto 3px;
+	background-color:#EF4D23;
 }
+	
+div.center {
+	width: 90%;
+	height: auto; 
+	position: absolute; 
+	top: 5%; 	
+	bottom: 5%;
+	margin-left: 5%;
+	text-align:center; 
+	-webkit-backface-visibility: hidden;
+}
+
+div.centerbuttons {
+	width: 100%;
+	height: auto; 
+	position: absolute; 
+	top: 20%; 
+	text-align:center; 
+	-webkit-backface-visibility: hidden;
+}
+
+
+
