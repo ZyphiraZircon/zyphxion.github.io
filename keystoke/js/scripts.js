@@ -3,78 +3,78 @@ var keystokePageApp = angular.module('keystokePageApp', []);
 keystokePageApp.config(function ($routeProvider) {
 	$routeProvider
 		.when ('/start',
-			{
-				controller: 'LoadingController',
-				templateUrl:'partials/Start.html'
-			})
+		{
+			controller: 'DataController',
+			templateUrl:'partials/Start.html'
+		})
 		.when ('/platform',
-			{
-				controller: 'LoadingController',
-				templateUrl:'partials/Platform.html'
-			})
+		{
+			controller: 'DataController',
+			templateUrl:'partials/Platform.html'
+		})
 		.when ('/customization',
 		{
-			controller: 'LoadingController',
+			controller: 'DataController',
 			templateUrl:'partials/Customization.html'
 		})
 		.when ('/login',
 		{
-			controller: 'LoadingController',
+			controller: 'DataController',
 			templateUrl:'partials/Login.html'
 		})
 		.when ('/payments',
 		{
-			controller: 'LoadingController',
+			controller: 'DataController',
 			templateUrl:'partials/Payments.html'
 		})
 		.when ('/datasync',
 		{
-			controller: 'LoadingController',
+			controller: 'DataController',
 			templateUrl:'partials/Datasync.html'
 		})
 		.when ('/reviews',
 		{
-			controller: 'LoadingController',
+			controller: 'DataController',
 			templateUrl:'partials/Reviews.html'
 		})
 		.when ('/profiles',
 		{
-			controller: 'LoadingController',
+			controller: 'DataController',
 			templateUrl:'partials/Profiles.html'
 		})
 		.when ('/webinteg',
 		{
-			controller: 'LoadingController',
+			controller: 'DataController',
 			templateUrl:'partials/Webinteg.html'
 		})
 		.when ('/location',
 		{
-			controller: 'LoadingController',
+			controller: 'DataController',
 			templateUrl:'partials/Location.html'
 		})
 		.when ('/3rdparty',
 		{
-			controller: 'LoadingController',
+			controller: 'DataController',
 			templateUrl:'partials/3rdparty.html'
 		})
 		.when ('/icon',
 		{
-			controller: 'LoadingController',
+			controller: 'DataController',
 			templateUrl:'partials/Icon.html'
 		})
 		.when ('/stage',
 		{
-			controller: 'LoadingController',
+			controller: 'DataController',
 			templateUrl:'partials/Stage.html'
 		})
 		.when ('/total',
 		{
-			controller: 'LoadingController',
+			controller: 'DataController',
 			templateUrl:'partials/Total.html'
 		})
 		.otherwise({redirectTo: '/start' });
 });
 
-keystokePageApp.controller('LoadingController', function($scope) {
+keystokePageApp.controller('DataController', function($scope) {
 	$scope.stuff = "Things?";
 });
