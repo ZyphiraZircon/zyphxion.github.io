@@ -1,6 +1,6 @@
-var markPageApp = angular.module('markPageApp', []);
+var markPageApp = angular.module('keystokePageApp', []);
 
-markPageApp.config(function ($routeProvider) {
+keystokePageApp.config(function ($routeProvider) {
 	$routeProvider
 		.when ('/start',
 			{
@@ -15,6 +15,6 @@ markPageApp.config(function ($routeProvider) {
 		.otherwise({redirectTo: '/start' });
 });
 
-markPageApp.controller('LoadingController', function($scope) {
+keystokePageApp.controller('LoadingController', function($scope) {
 	$scope.stuff = "Things?";
 });
