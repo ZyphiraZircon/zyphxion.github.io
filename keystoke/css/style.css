@@ -26,6 +26,15 @@ body{
 	text-align:center;
 }
 
+a.normalize, a.normalize:visited{
+	color:#EF4D23;
+	background-color:#FFFFFF;
+}
+a.normalize:hover{
+	color:#515A5F;
+	background-color:#FFFFFF;
+}
+
 a, a:visited {
 	color:#ffffff;
 	display:inline-block;
@@ -45,10 +54,6 @@ a, a:visited {
 a:hover{
 	text-decoration:none;
 	color:#515A5F;
-}
-
-a.normalize, a.normalize:visited, a.normalize:hover{
-	color:#EF4D23;
 }
 
 a.broken, a.broken:visited {
