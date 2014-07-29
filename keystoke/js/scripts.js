@@ -82,7 +82,7 @@ keystokePageApp.factory('Data', function () {
 
 keystokePageApp.controller('DataController', function($scope, Data) {
 	$scope.data = Data;
-	$scope.updateProgress = function() {
-		$('totalbar').value($scope.data.total);
+	$scope.addTotal = function(value) {
+		$scope.data.total += value;
 	}
 });
