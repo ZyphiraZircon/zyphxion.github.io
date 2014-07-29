@@ -1,6 +1,7 @@
 <div class="center">
+	Running total: ${{data.total}}<br><br>
 	<h3>Will it need to use location data?</h3><br>
-	<a href="#/3rdparty" class="3rdparty" ng-click="data.location='yes'">Yes</a><br><br>
-	<a href="#/3rdparty" class="3rdparty" ng-click="data.location='no'">No</a><br><br>
-	<a href="#/3rdparty" class="3rdparty" ng-click="data.location='unsure'">Not sure</a><br><br>
+	<a href="#/3rdparty" class="3rdparty" ng-click="data.location='yes'; addTotal(3000)">Yes</a><br><br>
+	<a href="#/3rdparty" class="3rdparty" ng-click="data.location='no'; addTotal(0)">No</a><br><br>
+	<a href="#/3rdparty" class="3rdparty" ng-click="data.location='unsure'; addTotal(1500)">Not sure</a><br><br>
 </div>

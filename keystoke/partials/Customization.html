@@ -1,8 +1,8 @@
 <div class="center">
-	Running total: ${{data.total}}<br>
+	Running total: ${{data.total}}<br><br>
 	<h3>How much customization does your app need?</h3><br>
-	<a href="#/login" class="login" ng-click="data.customization='stock'">Stock/Default</a><br><br>
-	<a href="#/login" class="login" ng-click="data.customization='full'">Fully customized</a><br><br>
-	<a href="#/login" class="login" ng-click="data.customization='custom'">Custom, similar to existing</a><br><br>
-	<a href="#/login" class="login" ng-click="data.customization='unsure'">Not sure</a><br><br>
+	<a href="#/login" class="login" ng-click="data.customization='stock'; addTotal(5000)">Stock/Default</a><br><br>
+	<a href="#/login" class="login" ng-click="data.customization='full'; addTotal(12000)">Fully customized</a><br><br>
+	<a href="#/login" class="login" ng-click="data.customization='custom'; addTotal(8000)">Custom, similar to existing</a><br><br>
+	<a href="#/login" class="login" ng-click="data.customization='unsure'; addTotal(6000)">Not sure</a><br><br>
 </div>

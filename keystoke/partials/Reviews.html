@@ -1,6 +1,7 @@
 <div class="center">
+	Running total: ${{data.total}}<br><br>
 	<h3>Will reviews and ratings be used?</h3><br>
-	<a href="#/profiles" class="profiles" ng-click="data.reviews='yes'">Yes</a><br><br>
-	<a href="#/profiles" class="profiles" ng-click="data.reviews='no'">No</a><br><br>
-	<a href="#/profiles" class="profiles" ng-click="data.reviews='unsure'">Not sure</a><br><br>
+	<a href="#/profiles" class="profiles" ng-click="data.reviews='yes'; addTotal(5000)">Yes</a><br><br>
+	<a href="#/profiles" class="profiles" ng-click="data.reviews='no'; addTotal(0)">No</a><br><br>
+	<a href="#/profiles" class="profiles" ng-click="data.reviews='unsure'; addTotal(2500)">Not sure</a><br><br>
 </div>

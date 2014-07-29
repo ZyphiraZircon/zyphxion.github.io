@@ -1,7 +1,8 @@
 <div class="center">
+	Running total: ${{data.total}}<br><br>
 	<h3>Will the user need to login?</h3><br>
-	<a href="#/payments" class="payments" ng-click="data.login='social'">Social Media and/or email</a><br><br>
-	<a href="#/payments" class="payments" ng-click="data.login='email'">Email</a><br><br>
-	<a href="#/payments" class="payments" ng-click="data.login='no'">No</a><br><br>
-	<a href="#/payments" class="payments" ng-click="data.login='unsure'">Not sure</a><br><br>
+	<a href="#/payments" class="payments" ng-click="data.login='social'; addTotal(3000)">Social Media and/or email</a><br><br>
+	<a href="#/payments" class="payments" ng-click="data.login='email'; addTotal(2000)">Email</a><br><br>
+	<a href="#/payments" class="payments" ng-click="data.login='no'; addTotal(0)">No</a><br><br>
+	<a href="#/payments" class="payments" ng-click="data.login='unsure'; addTotal(1500)">Not sure</a><br><br>
 </div>
