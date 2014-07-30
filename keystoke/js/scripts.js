@@ -101,7 +101,6 @@ keystokePageApp.controller('DataController', function($scope, Data) {
 		var http = new XMLHttpRequest();
 		http.open("POST", path, true);
 		http.setRequestHeader("Content-Type", "application/json");
-		alert(JSON.stringify(params));
 		http.send(JSON.stringify(params));
 		
 	}
