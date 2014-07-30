@@ -93,6 +93,7 @@ keystokePageApp.controller('DataController', function($scope, Data) {
 	}
 	
 	$scope.sendEmail = function(){
+		var path = 'http://api.postmarkapp.com/email';
 		var params = {
 		  "From" : "mark@markescobedo.com",
 		  "To" : $scope.data.email,
@@ -103,23 +104,36 @@ keystokePageApp.controller('DataController', function($scope, Data) {
 		  "Headers" : [{ "Name" : "CUSTOM-HEADER", "Value" : "value" }],
 		  "TrackOpens" : true
 		};
-		var path = 'http://api.postmarkapp.com/email';
-		var form = document.createElement("form");
-		form.setAttribute("method", "POST");
-		form.setAttribute("action", path);
 		
-		for(var key in params) {
-			if(params.hasOwnProperty(key)) {
-				var hiddenField = document.createElement("input");
-				hiddenField.setAttribute("type", "hidden");
-				hiddenField.setAttribute("name", key);
-				hiddenField.setAttribute("value", params[key]);
-
-				form.appendChild(hiddenField);
-			 }
+		var request = new XMLHttpRequest();
+		request.onreadystatechange= function () {
+			if (request.readyState==4) {
+				//handle response
+			}
 		}
-		document.body.appendChild(form);
-		form.submit();
+		request.open("POST", path, true);
+		request.setRequestHeader("header", 'f0a4c7f4-e570-4d8d-bacb-f5c65f73c689');
+		request.setRequestHeader("Accept", 'application/json');
+		request.send(params);
+		
+		
+		// var path = 'http://api.postmarkapp.com/email';
+		// var form = document.createElement("form");
+		// form.setAttribute("method", "POST");
+		// form.setAttribute("action", path);
+		
+		// for(var key in params) {
+			// if(params.hasOwnProperty(key)) {
+				// var hiddenField = document.createElement("input");
+				// hiddenField.setAttribute("type", "hidden");
+				// hiddenField.setAttribute("name", key);
+				// hiddenField.setAttribute("value", params[key]);
+
+				// form.appendChild(hiddenField);
+			 // }
+		// }
+		// document.body.appendChild(form);
+		// form.submit();
 	}
 	
 });
