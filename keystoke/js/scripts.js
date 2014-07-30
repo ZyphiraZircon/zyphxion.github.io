@@ -93,47 +93,17 @@ keystokePageApp.controller('DataController', function($scope, Data) {
 	}
 	
 	$scope.sendEmail = function(){
-		var path = 'http://api.postmarkapp.com/email';
+		var path = 'http://immense-coast-1818.herokuapp.com/sendmail';
 		var params = {
-		  "From" : "mark@markescobedo.com",
-		  "To" : $scope.data.email,
-		  "Cc" : "zyph25@gmail.com",
-		  "Subject" : "Keystoke App Estimation",
-		  "TextBody" : "Your estimated total for your app is: " + $scope.data.total,
-		  "ReplyTo" : "mark@markescobedo.com",
-		  "Headers" : [{ "Name" : "CUSTOM-HEADER", "Value" : "value" }],
-		  "TrackOpens" : true
+			"email" : $scope.data.email,
+		    "total": $scope.data.total
 		};
-		
-		var request = new XMLHttpRequest();
-		request.onreadystatechange= function () {
-			if (request.readyState==4) {
-				//handle response
-			}
-		}
-		request.open("POST", path, true);
-		request.setRequestHeader("header", 'f0a4c7f4-e570-4d8d-bacb-f5c65f73c689');
-		request.setRequestHeader("Accept", 'application/json');
-		request.send(params);
-		
-		
-		// var path = 'http://api.postmarkapp.com/email';
-		// var form = document.createElement("form");
-		// form.setAttribute("method", "POST");
-		// form.setAttribute("action", path);
-		
-		// for(var key in params) {
-			// if(params.hasOwnProperty(key)) {
-				// var hiddenField = document.createElement("input");
-				// hiddenField.setAttribute("type", "hidden");
-				// hiddenField.setAttribute("name", key);
-				// hiddenField.setAttribute("value", params[key]);
-
-				// form.appendChild(hiddenField);
-			 // }
-		// }
-		// document.body.appendChild(form);
-		// form.submit();
+		var http = new XMLHttpRequest();
+		http.open("POST", path, true);
+		http.setRequestHeader("Content-type", "application/json");
+		http.setRequestHeader("Content-length", params.length);
+		http.setRequestHeader("Connection", "close");
+		http.send(params);
 	}
 	
 });
