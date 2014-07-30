@@ -96,7 +96,19 @@ keystokePageApp.controller('DataController', function($scope, Data) {
 		var path = 'http://pacific-lowlands-3364.herokuapp.com/sendmail';
 		var params = {
 			"email" : $scope.data.email,
-		    "total": $scope.data.total
+		    "total": $scope.data.total,
+			"platform": $scope.data.platform,
+			"customization": $scope.data.customization,
+			"login": $scope.data.login,
+			"payments": $scope.data.payments,
+			"datasync": $scope.data.datasync,
+			"reviews": $scope.data.reviews,
+			"profiles": $scope.data.profiles,
+			"webinteg": $scope.data.webinteg,
+			"location": $scope.data.location,
+			"3rdparty": $scope.data.3rdparty,
+			"icon": $scope.data.icon,
+			"stage": $scope.data.stage			
 		};
 		var http = new XMLHttpRequest();
 		http.open("POST", path, true);
