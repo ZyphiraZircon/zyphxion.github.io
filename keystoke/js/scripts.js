@@ -93,7 +93,7 @@ keystokePageApp.controller('DataController', function($scope, Data) {
 	}
 	
 	$scope.sendEmail = function(){
-		var path = 'http://immense-coast-1818.herokuapp.com/sendmail';
+		var path = 'http://intense-fjord-3277.herokuapp.com/sendmail';
 		var params = {
 			"email" : $scope.data.email,
 		    "total": $scope.data.total
