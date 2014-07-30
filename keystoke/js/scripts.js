@@ -1,4 +1,4 @@
-var keystokePageApp = angular.module('keystokePageApp', ['ngRoute']);
+var keystokePageApp = angular.module('keystokePageApp', ['ngRoute', 'ui.bootstrap']);
 
 keystokePageApp.config(function ($routeProvider) {
 	$routeProvider
