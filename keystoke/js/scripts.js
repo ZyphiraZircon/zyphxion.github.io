@@ -72,6 +72,11 @@ keystokePageApp.config(function ($routeProvider) {
 			controller: 'DataController',
 			templateUrl:'partials/Total.html'
 		})
+		.when ('/submit',
+		{
+			controller: 'DataController',
+			templateUrl:'partials/Submit.html'
+		})
 		.when ('/thanks',
 		{
 			controller: 'DataController',
@@ -92,11 +97,29 @@ keystokePageApp.controller('DataController', function($scope, Data) {
 		$scope.data.total += value;
 	}
 	
+	$scope.ideas = [
+		{name:'New feature(s) added to:'},
+		{name:'Redesign or addition to:'},
+		{name:'A new:'},
+		{name:'Other work on:'}
+	];
+	
+	$scope.ideatargets = [
+		{name:'Website'},
+		{name:'Android app'},
+		{name:'iOS app'},
+		{name:'Mobile Web app'},
+		{name:'Other'}
+	];
+		
+	
 	$scope.sendEmail = function(){
 		var path = 'http://pacific-lowlands-3364.herokuapp.com/sendmail';
 		var params = {
 			"email" : $scope.data.email,
 		    "total": $scope.data.total,
+			"fname": $scope.data.fname,
+			"lname": $scope.data.lname,
 			"platform": $scope.data.platform,
 			"customization": $scope.data.customization,
 			"login": $scope.data.login,
