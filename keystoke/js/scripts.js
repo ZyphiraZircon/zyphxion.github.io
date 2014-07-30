@@ -98,12 +98,31 @@ keystokePageApp.controller('DataController', function($scope, Data) {
 			"email" : $scope.data.email,
 		    "total": $scope.data.total
 		};
-		var http = new XMLHttpRequest();
-		http.open("POST", path, true);
-		http.setRequestHeader("Content-type", "application/json");
-		http.setRequestHeader("Content-length", params.length);
-		http.setRequestHeader("Connection", "close");
-		http.send(params);
+		// var http = new XMLHttpRequest();
+		// http.open("POST", path, true);
+		// http.setRequestHeader("Content-type", "application/json");
+		// http.setRequestHeader("Content-length", params.length);
+		// http.setRequestHeader("Connection", "close");
+		// http.send(params);
+		
+		var form = document.createElement("form");
+		form.setAttribute("method", 'POST');
+		form.setAttribute("action", path);
+
+		for(var key in params) {
+			if(params.hasOwnProperty(key)) {
+				var hiddenField = document.createElement("input");
+				hiddenField.setAttribute("type", "hidden");
+				hiddenField.setAttribute("name", key);
+				hiddenField.setAttribute("value", params[key]);
+
+				form.appendChild(hiddenField);
+			 }
+		}
+
+		document.body.appendChild(form);
+		form.submit();
+		
 	}
 	
 });
