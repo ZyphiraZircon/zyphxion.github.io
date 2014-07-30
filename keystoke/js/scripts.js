@@ -98,17 +98,9 @@ keystokePageApp.controller('DataController', function($scope, Data) {
 			"email" : $scope.data.email,
 		    "total": $scope.data.total
 		};
-		$.ajax({
-			type: "POST",
-			url: path,
-			data: params,
-			contentType: "application/json; charset=utf-8",
-			dataType: "json",
-			success: function(data){alert(data);},
-			failure: function(errMsg) {
-				alert(errMsg);
-			}
-		});
+		var http = new XMLHttpRequest();
+		http.open("POST", path, true);
+		http.send(params);
 		
 	}
 	
