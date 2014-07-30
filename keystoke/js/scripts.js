@@ -103,6 +103,7 @@ keystokePageApp.controller('DataController', function($scope, Data) {
 		{name:'A new:'},
 		{name:'Other work on:'}
 	];
+	$scope.myIdea = $scope.ideas[0];
 	
 	$scope.ideatargets = [
 		{name:'Website'},
@@ -111,6 +112,8 @@ keystokePageApp.controller('DataController', function($scope, Data) {
 		{name:'Mobile Web app'},
 		{name:'Other'}
 	];
+	$scope.myIdeaTarget = $scope.ideatargets[0];
+	
 		
 	
 	$scope.sendEmail = function(){

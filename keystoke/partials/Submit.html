@@ -2,7 +2,7 @@
 	<h2>Dream it. Realize it. Build it.</h2><br>
 	<h3>Let us know what you're thinking so we can help you build it.</h3><br>
 	What's your idea? <br>
-	<select ng-options="idea.name for idea in ideas"></select><select ng-options="ideatarget.name for ideatarget in ideatargets"></select><br><br>
+	<select ng-model="myIdea" ng-options="idea.name for idea in ideas"></select><select ng-model="myIdeaTarget" ng-options="ideatarget.name for ideatarget in ideatargets"></select><br><br>
 	<input type="text" ng-model="data.fname" placeholder="First Name" required><input type="text" ng-model="data.lname" placeholder="Last Name" required><br>
 	<input type="email" ng-model="data.email" placeholder="Email" required><br>
 	
