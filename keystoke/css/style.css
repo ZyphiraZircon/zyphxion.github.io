@@ -75,26 +75,20 @@ a.normalize:hover{
 	margin:0px;
 }
 
-a.broken, a.broken:visited {
+a.big, a.big:hover, a.big:visited {
 	color:#ffffff;
 	display:inline-block;
-	padding:5px 10px;
-	margin:10px auto 3px;
-	background-color:#CC4040;
+	padding:7px 12px;
+	margin:12px auto 5px;
+	background-color:#EF4D23;
 	font-weight:bold;
-	border-radius:4px;
-	text-transform:uppercase;
-	font-size:16px;
+	border-radius:2px;
+	font-size:20px;
 	text-decoration:none;
 	
 	-webkit-transition:background-color 0.25s;
 	-moz-transition:background-color 0.25s;
 	transition:background-color 0.25s;
-}
-
-a.broken:hover{
-	text-decoration:none;
-	background-color:#FF8484;
 }
 
 section, footer, header, aside, nav{
