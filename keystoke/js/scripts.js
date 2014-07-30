@@ -106,7 +106,7 @@ keystokePageApp.controller('DataController', function($scope, Data) {
 			"profiles": $scope.data.profiles,
 			"webinteg": $scope.data.webinteg,
 			"location": $scope.data.location,
-			"3rdparty": $scope.data.thirdparty,
+			"thirdparty": $scope.data.thirdparty,
 			"icon": $scope.data.icon,
 			"stage": $scope.data.stage			
 		};
