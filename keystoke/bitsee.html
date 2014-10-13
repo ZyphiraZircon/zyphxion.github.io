@@ -6,7 +6,9 @@
 		<link href="css/style.css" rel="stylesheet" />
 	</head>
 
-	<body>
-		<a href="bitsee://">BITSEE</a>
-	</body>
+	<body><script>
+		var param = /[&?]path=([^&]+)/.exec(location.search);
+		param = param ? param[1].replace(/"/g, '&quot;') : '';
+		document.write('<a href="bitsee://'+param+'">bit[see]</a>');
+</script></body>
 </html>
