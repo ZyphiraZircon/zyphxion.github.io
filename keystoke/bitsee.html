@@ -7,7 +7,7 @@
 	</head>
 
 	<body><script>
-		var param = /[&?]path=([^&]+)/.exec(location.search);
+		var param = /[&?]article=([^&]+)/.exec(location.search);
 		param = param ? param[1].replace(/"/g, '&quot;') : '';
 		document.write('<a href="bitsee://'+param+'">bit[see]</a>');
 </script></body>
