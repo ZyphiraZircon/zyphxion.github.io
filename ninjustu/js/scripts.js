@@ -48,9 +48,9 @@ ninjutsuApp.controller('DataController', function($scope, Data) {
 	  else if (e.keyCode == 52 ){
 	    $scope.checkNinjutsu();
 	  }
-	  console.log($scope.data.displayMudras(data.displayMudras[0]));
-	  console.log($scope.data.displayMudras(data.displayMudras[1]));
-	  console.log($scope.data.displayMudras(data.displayMudras[2]));
+	  console.log($scope.data.displayMudras[0]);
+	  console.log($scope.data.displayMudras[1]);
+	  console.log($scope.data.displayMudras[2]);
 	};
 
 	$scope.checkNinjutsu = function(){
