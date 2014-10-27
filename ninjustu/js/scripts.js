@@ -85,6 +85,7 @@ ninjutsuApp.controller('DataController', function($scope, Data) {
 			}
 		}
 		console.log(JSON.stringify($scope.mudras));
+		console.log($scope.effect);
 		$scope.mudras = [];
 	};
 
