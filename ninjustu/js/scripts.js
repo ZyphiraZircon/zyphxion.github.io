@@ -17,6 +17,11 @@ ninjutsuApp.factory('Data', function () {
 
 
 ninjutsuApp.controller('DataController', function($scope, Data) {
+	$scope.data = {
+		mudras: [],
+		displayMudras: [],
+		effect: ''
+	};
 	$scope.data.mudras = [];
 	$scope.data.displayMudras = [];
 	$scope.data.effect = '';
