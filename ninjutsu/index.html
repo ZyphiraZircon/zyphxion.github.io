@@ -75,19 +75,19 @@
           console.log(e.keyCode);
           if (mudras.length < 3){
             mudras.push('ten');
-            displayMudras.push('天');
+            displayMudras.push('<span style="text-shadow: 0 0 0.2em #00CCFF">天</span>');
           }
         }
         else if (e.keyCode == chiBind ){
           if (mudras.length < 3){
             mudras.push('chi');
-            displayMudras.push('地');
+            displayMudras.push('<span style="text-shadow: 0 0 0.2em #FF6600">地</span>');
           }
         }
         else if (e.keyCode == jinBind ){
           if (mudras.length < 3){
             mudras.push('jin');
-            displayMudras.push('人');
+            displayMudras.push('<span style="text-shadow: 0 0 0.2em #FFCC00">人</span>');
           }
         }
         else if (e.keyCode == ninBind ){
