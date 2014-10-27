@@ -28,68 +28,6 @@ body{
 
 
 
-a, a:hover, a:visited {
-	color:#ffffff;
-	display:inline-block;
-	padding:5px 10px;
-	margin:10px auto 3px;
-	background-color:#EF4D23;
-	font-weight:bold;
-	border-radius:2px;
-	font-size:16px;
-	text-decoration:none;
-	
-	-webkit-transition:background-color 0.25s;
-	-moz-transition:background-color 0.25s;
-	transition:background-color 0.25s;
-}
-
-a.expand, a.expand:hover, a.expand:visited {
-	color:#ffffff;
-	display:inline-block;
-	padding:3px 7px;
-	margin:10px auto 3px;
-	background-color:#EF4D23;
-	font-weight:bold;
-	border-radius:2px;
-	font-size:12px;
-	text-decoration:none;
-	
-	-webkit-transition:background-color 0.25s;
-	-moz-transition:background-color 0.25s;
-	transition:background-color 0.25s;
-}
-
-a.normalize, a.normalize:visited{
-	color:#EF4D23;
-	background-color:#FFFFFF;
-	font-weight:normal;
-	padding:0px;
-	margin:0px;
-}
-a.normalize:hover{
-	color:#515A5F;
-	background-color:#FFFFFF;
-	font-weight:normal;
-	padding:0px;
-	margin:0px;
-}
-
-a.big, a.big:hover, a.big:visited {
-	color:#ffffff;
-	display:inline-block;
-	padding:7px 12px;
-	margin:12px auto 5px;
-	background-color:#EF4D23;
-	font-weight:bold;
-	border-radius:2px;
-	font-size:20px;
-	text-decoration:none;
-	
-	-webkit-transition:background-color 0.25s;
-	-moz-transition:background-color 0.25s;
-	transition:background-color 0.25s;
-}
 
 section, footer, header, aside, nav{
 	display: block;
@@ -113,33 +51,33 @@ div.headbar {
 	width: 100%;
 	padding:5px 10px;
 	position: fixed;
-	text-align:left; 
+	text-align:left;
 	z-index: 2;
 	background-color:#EF4D23;
 }
-	
+
 div.center {
 	width: 90%;
-	height: auto; 
-	position: absolute; 
-	top: 10%; 	
+	height: auto;
+	position: absolute;
+	top: 10%;
 	bottom: 5%;
 	margin-left: 5%;
-	text-align:center; 
+	text-align:center;
 	-webkit-backface-visibility: hidden;
 }
 
 div.centerbuttons {
 	width: 100%;
-	height: auto; 
-	position: absolute; 
-	top: 20%; 
-	text-align:center; 
+	height: auto;
+	position: absolute;
+	top: 20%;
+	text-align:center;
 	-webkit-backface-visibility: hidden;
 }
 
 div.summary {
-	text-align:left; 
+	text-align:left;
 }
 
 input {
