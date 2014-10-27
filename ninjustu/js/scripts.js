@@ -39,6 +39,7 @@ ninjutsuApp.controller('DataController', function($scope, Data) {
 		if ($scope.mudras.length <= 1){
 			//do nothing
 		}
+		$scope.stringMudras = JSON.stringify($scope.mudras);
 	};
 
 });
