@@ -22,9 +22,9 @@ ninjutsuApp.controller('DataController', function($scope, Data) {
 		displayMudras: [],
 		effect: ''
 	};
-	$scope.data.mudras = [];
-	$scope.data.displayMudras = [];
-	$scope.data.effect = '';
+	//$scope.data.mudras = [];
+	//$scope.data.displayMudras = [];
+	//$scope.data.effect = '';
 
 	document.onkeyup = function(e) {
 	  if (e.keyCode == 49 ){
@@ -91,6 +91,7 @@ ninjutsuApp.controller('DataController', function($scope, Data) {
 		console.log(JSON.stringify($scope.data.mudras));
 		console.log($scope.data.effect);
 		$scope.data.mudras = [];
+		$scope.data.displayMudras = [];
 	};
 
 });
