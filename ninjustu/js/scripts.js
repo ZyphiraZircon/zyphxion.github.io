@@ -17,28 +17,27 @@ ninjutsuApp.factory('Data', function () {
 
 
 ninjutsuApp.controller('DataController', function($scope, Data) {
-	$scope.data = Data;
-	$scope.mudras = [];
-	$scope.displayMudras = [];
-	$scope.effect = '';
+	$scope.data.mudras = [];
+	$scope.data.displayMudras = [];
+	$scope.data.effect = '';
 
 	document.onkeyup = function(e) {
 	  if (e.keyCode == 49 ){
-	  	if ($scope.mudras.length < 3){
-		    $scope.mudras.push('ten');
-		    $scope.displayMudras.push('天');
+	  	if ($scope.data.mudras.length < 3){
+		    $scope.data.mudras.push('ten');
+		    $scope.data.displayMudras.push('天');
 		  }
 	  }
 	  else if (e.keyCode == 50 ){
-	  	if ($scope.mudras.length < 3){
-		    $scope.mudras.push('chi');
-		    $scope.displayMudras.push('地');
+	  	if ($scope.data.mudras.length < 3){
+		    $scope.data.mudras.push('chi');
+		    $scope.data.displayMudras.push('地');
 		  }
 	  }
 	  else if (e.keyCode == 51 ){
-	  	if ($scope.mudras.length < 3){
-		    $scope.mudras.push('jin');
-		    $scope.displayMudras.push('人');
+	  	if ($scope.data.mudras.length < 3){
+		    $scope.data.mudras.push('jin');
+		    $scope.data.displayMudras.push('人');
 		  }
 	  }
 	  else if (e.keyCode == 52 ){
@@ -47,46 +46,46 @@ ninjutsuApp.controller('DataController', function($scope, Data) {
 	};
 
 	$scope.checkNinjutsu = function(){
-		if ($scope.mudras.length == 1){
-			$scope.effect = 'Fuma Shuriken';
+		if ($scope.data.mudras.length == 1){
+			$scope.data.effect = 'Fuma Shuriken';
 		}
-		else if ($scope.mudras.length == 2){
-			if (($scope.mudras[0] === 'chi' && $scope.mudras[1] === 'ten') ||
-				  ($scope.mudras[0] === 'jin' && $scope.mudras[1] === 'ten')){
-				$scope.effect = 'Katon';
+		else if ($scope.data.mudras.length == 2){
+			if (($scope.data.mudras[0] === 'chi' && $scope.data.mudras[1] === 'ten') ||
+				  ($scope.data.mudras[0] === 'jin' && $scope.data.mudras[1] === 'ten')){
+				$scope.data.effect = 'Katon';
 			}
-			else if (($scope.mudras[0] === 'ten' && $scope.mudras[1] === 'chi') ||
-				       ($scope.mudras[0] === 'jin' && $scope.mudras[1] === 'chi')){
-				$scope.effect = 'Raiton';
+			else if (($scope.data.mudras[0] === 'ten' && $scope.data.mudras[1] === 'chi') ||
+				       ($scope.data.mudras[0] === 'jin' && $scope.data.mudras[1] === 'chi')){
+				$scope.data.effect = 'Raiton';
 			}
-			else if (($scope.mudras[0] === 'ten' && $scope.mudras[1] === 'jin') ||
-				       ($scope.mudras[0] === 'chi' && $scope.mudras[1] === 'jin')){
-				$scope.effect = 'Hyoton';
+			else if (($scope.data.mudras[0] === 'ten' && $scope.data.mudras[1] === 'jin') ||
+				       ($scope.data.mudras[0] === 'chi' && $scope.data.mudras[1] === 'jin')){
+				$scope.data.effect = 'Hyoton';
 			}
 			else{
-				$scope.effect = 'Rabbit Medium';
+				$scope.data.effect = 'Rabbit Medium';
 			}
 		}
-		else if ($scope.mudras.length == 3){
-			if (($scope.mudras[0] === 'jin' && $scope.mudras[1] === 'chi' && $scope.mudras[2] === 'ten') ||
-				  ($scope.mudras[0] === 'chi' && $scope.mudras[1] === 'jin' && $scope.mudras[2] === 'ten')){
-				$scope.effect = 'Huton';
+		else if ($scope.data.mudras.length == 3){
+			if (($scope.data.mudras[0] === 'jin' && $scope.data.mudras[1] === 'chi' && $scope.data.mudras[2] === 'ten') ||
+				  ($scope.data.mudras[0] === 'chi' && $scope.data.mudras[1] === 'jin' && $scope.data.mudras[2] === 'ten')){
+				$scope.data.effect = 'Huton';
 			}
-			else if (($scope.mudras[0] === 'ten' && $scope.mudras[1] === 'jin' && $scope.mudras[2] === 'chi') ||
-				       ($scope.mudras[0] === 'jin' && $scope.mudras[1] === 'ten' && $scope.mudras[2] === 'chi')){
-				$scope.effect = 'Doton';
+			else if (($scope.data.mudras[0] === 'ten' && $scope.data.mudras[1] === 'jin' && $scope.data.mudras[2] === 'chi') ||
+				       ($scope.data.mudras[0] === 'jin' && $scope.data.mudras[1] === 'ten' && $scope.data.mudras[2] === 'chi')){
+				$scope.data.effect = 'Doton';
 			}
-			else if (($scope.mudras[0] === 'ten' && $scope.mudras[1] === 'chi' && $scope.mudras[2] === 'jin') ||
-				       ($scope.mudras[0] === 'chi' && $scope.mudras[1] === 'ten' && $scope.mudras[2] === 'jin')){
-				$scope.effect = 'Suiton';
+			else if (($scope.data.mudras[0] === 'ten' && $scope.data.mudras[1] === 'chi' && $scope.data.mudras[2] === 'jin') ||
+				       ($scope.data.mudras[0] === 'chi' && $scope.data.mudras[1] === 'ten' && $scope.data.mudras[2] === 'jin')){
+				$scope.data.effect = 'Suiton';
 			}
 			else{
-				$scope.effect = 'Rabbit Medium';
+				$scope.data.effect = 'Rabbit Medium';
 			}
 		}
-		console.log(JSON.stringify($scope.mudras));
-		console.log($scope.effect);
-		$scope.mudras = [];
+		console.log(JSON.stringify($scope.data.mudras));
+		console.log($scope.data.effect);
+		$scope.data.mudras = [];
 	};
 
 });
