@@ -12,14 +12,15 @@
       <h1>Mudras: [ <span id="mudras1"></span> , <span id="mudras2"></span> , <span id="mudras3"></span> ]</h1>
     	<h2>Effect: <span id="effect"></span></h2>
       <h4><span id="lol"></span><br></h4>
+      <h4><span id="rebind"></span><br></h4>
       <br>
       <br>
       <div style="position: absolute; top: 30%; margin-left: auto; margin-right: auto; left: 0; right: 0;">
-      Press Key:<br>
-      1 = Ten (天)<br>
-      2 = Chi (地)<br>
-      3 = Jin (人)<br>
-      4 = Ninjutsu<br>
+      Press Key (Click to Rebind Key):<br>
+      <span id="tenC">1</span> = <a href="#" onclick="rebindTen()">Ten (天)</a><br>
+      <span id="chiC">2</span> = <a href="#" onclick="rebindChi()">Chi (地)</a><br>
+      <span id="jinC">3</span> = <a href="#" onclick="rebindJin()">Jin (人)</a><br>
+      <span id="ninC">4</span> = <a href="#" onclick="rebindNin()">Ninjutsu</a><br>
       <br>
       <br>
       <p style="font-size: 12px">Made by <a href="http://na.finalfantasyxiv.com/lodestone/character/1434170/" style="text-decoration:none;">Zyph Zedyrwaen</a> from Sargatanas!</p>
@@ -31,31 +32,68 @@
       var mudras = [];
       var displayMudras = [];
       var effect = '';
+      var tenBind = 49;
+      var tenChar = '1';
+      var chiBind = 50;
+      var chiChar = '2';
+      var jinBind = 51;
+      var jinChar = '3';
+      var ninBind = 52;
+      var ninChar = '4';
+      var waitForTenBind = false;
+      var waitForChiBind = false;
+      var waitForJinBind = false;
+      var waitForNinBind = false;
 
       document.onkeyup = function(e){
-
-        if (e.keyCode == 49 ){
+        document.getElementById("rebind").innerHTML = '';
+        if(waitForTenBind === true){
+          tenBind = e.keyCode;
+          tenChar = String.fromCharCode(e.keyCode);
+          document.getElementById("tenC").innerHTML = tenChar;
+          waitForTenBind = false;
+        }
+        else if(waitForChiBind === true){
+          chiBind = e.keyCode;
+          chiChar = String.fromCharCode(e.keyCode);
+          document.getElementById("chiC").innerHTML = chiChar;
+          waitForChiBind = false;
+        }
+        else if(waitForJinBind === true){
+          jinBind = e.keyCode;
+          jinChar = String.fromCharCode(e.keyCode);
+          document.getElementById("jinC").innerHTML = jinChar;
+          waitForJinBind = false;
+        }
+        else if(waitForNinBind === true){
+          ninBind = e.keyCode;
+          ninChar = String.fromCharCode(e.keyCode);
+          document.getElementById("ninC").innerHTML = ninChar;
+          waitForNinBind = false;
+        }
+        else if (e.keyCode == tenBind ){
           console.log(e.keyCode);
           if (mudras.length < 3){
             mudras.push('ten');
             displayMudras.push('天');
           }
         }
-        else if (e.keyCode == 50 ){
+        else if (e.keyCode == chiBind ){
           if (mudras.length < 3){
             mudras.push('chi');
             displayMudras.push('地');
           }
         }
-        else if (e.keyCode == 51 ){
+        else if (e.keyCode == jinBind ){
           if (mudras.length < 3){
             mudras.push('jin');
             displayMudras.push('人');
           }
         }
-        else if (e.keyCode == 52 ){
+        else if (e.keyCode == ninBind ){
           checkNinjutsu();
         }
+
         if (displayMudras[0] !== undefined){
           document.getElementById("mudras1").innerHTML = displayMudras[0];
         }
@@ -171,6 +209,26 @@
         console.log(effect);
         mudras = [];
         displayMudras = [];
+      }
+
+      function rebindTen(){
+        waitForTenBind = true;
+        document.getElementById("rebind").innerHTML = 'Press the key you want to rebind the skill to.';
+      }
+
+      function rebindChi(){
+        waitForChiBind = true;
+        document.getElementById("rebind").innerHTML = 'Press the key you want to rebind the skill to.';
+      }
+
+      function rebindJin(){
+        waitForJinBind = true;
+        document.getElementById("rebind").innerHTML = 'Press the key you want to rebind the skill to.';
+      }
+
+      function rebindNin(){
+        waitForNinBind = true;
+        document.getElementById("rebind").innerHTML = 'Press the key you want to rebind the skill to.';
       }
     </script>
   </body>
