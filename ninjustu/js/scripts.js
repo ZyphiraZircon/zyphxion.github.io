@@ -48,9 +48,9 @@ ninjutsuApp.controller('DataController', function($scope, Data) {
 	  else if (e.keyCode == 52 ){
 	    $scope.checkNinjutsu();
 	  }
-	  console.log($scope.data.displayMudras[0]);
-	  console.log($scope.data.displayMudras[1]);
-	  console.log($scope.data.displayMudras[2]);
+	  document.getElementById("mudra1").innerHTML = $scope.data.displayMudras[0];
+	  document.getElementById("mudra2").innerHTML = $scope.data.displayMudras[1];
+	  document.getElementById("mudra3").innerHTML = $scope.data.displayMudras[2];
 	};
 
 	$scope.checkNinjutsu = function(){
@@ -91,6 +91,7 @@ ninjutsuApp.controller('DataController', function($scope, Data) {
 				$scope.data.effect = 'Rabbit Medium';
 			}
 		}
+		document.getElementById("effect").innerHTML = $scope.data.effect;
 		console.log(JSON.stringify($scope.data.mudras));
 		console.log($scope.data.effect);
 		$scope.data.mudras = [];
