@@ -1,19 +1,164 @@
 <html data-ng-app="ninjutsuApp">
-	<head>
-		<meta charset="utf-8"/>
-		<title>Ninjutsu Simulator</title>
-		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" />
-		<link href="css/style.css" rel="stylesheet" />
-	</head>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Ninjutsu Simulator</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
 
-	<body>
-		<header>
-		</header>
-		<div>
-			<div data-ng-view=""></div>
-		</div>
-		<script src="js/angular.js"></script>
-		<script src="js/angular-route.js"></script>
-		<script src="js/scripts.js"></script>
-	</body>
+  <body>
+
+    <div class="center" >
+      <h1>Mudras: [ <span id="mudras1"></span> , <span id="mudras2"></span> , <span id="mudras3"></span> ]</h1>
+    	<h2>Effect: <span id="effect"></span></h2>
+      <h4><span id="lol"></span><br></h4>
+      <br>
+      <br>
+      Press Key:<br>
+      1 = Ten (天)<br>
+      2 = Chi (地)<br>
+      3 = Jin (人)<br>
+      4 = Ninjutsu
+    </div>
+
+    <script>
+      var mudras = [];
+      var displayMudras = [];
+      var effect = '';
+
+      document.onkeyup = function(e){
+
+        if (e.keyCode == 49 ){
+          console.log(e.keyCode);
+          if (mudras.length < 3){
+            mudras.push('ten');
+            displayMudras.push('天');
+          }
+        }
+        else if (e.keyCode == 50 ){
+          if (mudras.length < 3){
+            mudras.push('chi');
+            displayMudras.push('地');
+          }
+        }
+        else if (e.keyCode == 51 ){
+          if (mudras.length < 3){
+            mudras.push('jin');
+            displayMudras.push('人');
+          }
+        }
+        else if (e.keyCode == 52 ){
+          checkNinjutsu();
+        }
+        if (displayMudras[0] !== undefined){
+          document.getElementById("mudras1").innerHTML = displayMudras[0];
+        }
+        else{
+          document.getElementById("mudras1").innerHTML = '';
+        }
+        if (displayMudras[1] !== undefined){
+          document.getElementById("mudras2").innerHTML = displayMudras[1];
+        }
+        else{
+          document.getElementById("mudras2").innerHTML = '';
+        }
+        if (displayMudras[2] !== undefined){
+          document.getElementById("mudras3").innerHTML = displayMudras[2];
+        }
+        else{
+          document.getElementById("mudras3").innerHTML = '';
+        }
+      };
+
+
+      function checkNinjutsu(){
+        if (mudras.length == 1){
+          effect = 'Fuma Shuriken';
+        }
+        else if (mudras.length == 2){
+          if ((mudras[0] === 'chi' && mudras[1] === 'ten') ||
+              (mudras[0] === 'jin' && mudras[1] === 'ten')){
+            effect = 'Katon';
+          }
+          else if ((mudras[0] === 'ten' && mudras[1] === 'chi') ||
+                   (mudras[0] === 'jin' && mudras[1] === 'chi')){
+            effect = 'Raiton';
+          }
+          else if ((mudras[0] === 'ten' && mudras[1] === 'jin') ||
+                   (mudras[0] === 'chi' && mudras[1] === 'jin')){
+            effect = 'Hyoton';
+          }
+          else{
+            effect = 'Rabbit Medium';
+          }
+        }
+        else if (mudras.length == 3){
+          if ((mudras[0] === 'jin' && mudras[1] === 'chi' && mudras[2] === 'ten') ||
+              (mudras[0] === 'chi' && mudras[1] === 'jin' && mudras[2] === 'ten')){
+            effect = 'Huton';
+          }
+          else if ((mudras[0] === 'ten' && mudras[1] === 'jin' && mudras[2] === 'chi') ||
+                   (mudras[0] === 'jin' && mudras[1] === 'ten' && mudras[2] === 'chi')){
+            effect = 'Doton';
+          }
+          else if ((mudras[0] === 'ten' && mudras[1] === 'chi' && mudras[2] === 'jin') ||
+                   (mudras[0] === 'chi' && mudras[1] === 'ten' && mudras[2] === 'jin')){
+            effect = 'Suiton';
+          }
+          else{
+            effect = 'Rabbit Medium';
+          }
+        }
+        if (effect == 'Rabbit Medium'){
+          var rand = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
+          if(rand == 1){
+            document.getElementById("lol").innerHTML = 'gg scrub';
+          }
+          if(rand == 2){
+            document.getElementById("lol").innerHTML = '#uninstall';
+          }
+          if(rand == 3){
+            document.getElementById("lol").innerHTML = 'thanks yoshi-p';
+          }
+          if(rand == 4){
+            document.getElementById("lol").innerHTML = 'git gud';
+          }
+        }
+        else{
+          document.getElementById("lol").innerHTML = '';
+        }
+
+        if(effect === 'Katon'){
+          document.getElementById("effect").style.color = 'red';
+        }
+        else if(effect === 'Raiton'){
+          document.getElementById("effect").style.color = 'purple';
+        }
+        else if(effect === 'Hyoton'){
+          document.getElementById("effect").style.color = 'cyan';
+        }
+        else if(effect === 'Huton'){
+          document.getElementById("effect").style.color = 'green';
+        }
+        else if(effect === 'Doton'){
+          document.getElementById("effect").style.color = 'orange';
+        }
+        else if(effect === 'Suiton'){
+          document.getElementById("effect").style.color = 'blue';
+        }
+        else if(effect === 'Fuma Shuriken'){
+          document.getElementById("effect").style.color = 'black';
+        }
+        else if(effect === 'Rabbit Medium'){
+          document.getElementById("effect").style.color = 'pink';
+        }
+
+        document.getElementById("effect").innerHTML = effect;
+        console.log(JSON.stringify(mudras));
+        console.log(effect);
+        mudras = [];
+        displayMudras = [];
+      }
+    </script>
+  </body>
 </html>
