@@ -25,29 +25,30 @@ ninjutsuApp.controller('DataController', function($scope, Data) {
 	//$scope.data.mudras = [];
 	//$scope.data.displayMudras = [];
 	//$scope.data.effect = '';
-
-	  if ($scope.event.keyCode == 49 ){
-	  	console.log($scope.event.keyCode);
+	$scope.keyPress =function(keyCode){
+	  if (keyCode == 49 ){
+	  	console.log(keyCode);
 	  	if ($scope.data.mudras.length < 3){
 		    $scope.data.mudras.push('ten');
 		    $scope.data.displayMudras.push('天');
 		  }
 	  }
-	  else if ($scope.event.keyCode == 50 ){
+	  else if (keyCode == 50 ){
 	  	if ($scope.data.mudras.length < 3){
 		    $scope.data.mudras.push('chi');
 		    $scope.data.displayMudras.push('地');
 		  }
 	  }
-	  else if ($scope.event.keyCode == 51 ){
+	  else if (keyCode == 51 ){
 	  	if ($scope.data.mudras.length < 3){
 		    $scope.data.mudras.push('jin');
 		    $scope.data.displayMudras.push('人');
 		  }
 	  }
-	  else if ($scope.event.keyCode == 52 ){
+	  else if (keyCode == 52 ){
 	    $scope.checkNinjutsu();
 	  }
+	}
 	  //document.getElementById("mudra1").innerHTML = $scope.data.displayMudras[0];
 	  //document.getElementById("mudra2").innerHTML = $scope.data.displayMudras[1];
 	  //document.getElementById("mudra3").innerHTML = $scope.data.displayMudras[2];
