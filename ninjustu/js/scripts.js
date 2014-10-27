@@ -26,6 +26,8 @@ ninjutsuApp.controller('DataController', function($scope, Data) {
 	//$scope.data.displayMudras = [];
 	//$scope.data.effect = '';
 	$scope.keyPress =function(keyCode){
+		console.log(keyCode);
+
 	  if (keyCode == 49 ){
 	  	console.log(keyCode);
 	  	if ($scope.data.mudras.length < 3){
