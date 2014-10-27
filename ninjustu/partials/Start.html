@@ -1,5 +1,5 @@
 <div class="center" >
-  <h1>Mudras: [ <span id="mudra1"></span> , <span id="mudra2"></span> , <span id="mudra3"></span> ]</h1>
+  <h1>Mudras: [ {{data.displayMudras[0]}} , {{data.displayMudras[1]}} , {{data.displayMudras[2]}} ]</h1>
 	<h2>Effect: <span id="effect"></span></h2>
   <br>
   <br>
@@ -8,5 +8,5 @@
   2 = Chi (地)<br>
   3 = Jin (人)<br>
   4 = Ninjutsu
-  <input style="text"
+  <input ng-keyup="event=$event">
 </div>
