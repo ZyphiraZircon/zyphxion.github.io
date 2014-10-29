@@ -11,15 +11,16 @@
     <div class="center" >
       <h1>Mudras: [ <span id="mudras1"></span> , <span id="mudras2"></span> , <span id="mudras3"></span> ]</h1>
     	<h2>Effect: <span id="effect"></span></h2>
+      <h4><span id="image"></span></h4>
       <h4><span id="lol"></span><br></h4>
       <h4><span id="rebind"></span><br></h4>
       <br>
       <br>
       <div style="position: absolute; top: 30%; margin-left: auto; margin-right: auto; left: 0; right: 0;">
       Press Key (Click to Rebind Key):<br>
-      <span id="tenC">1</span> = <a href="#" onclick="rebindTen()">Ten (天)</a><br>
-      <span id="chiC">2</span> = <a href="#" onclick="rebindChi()">Chi (地)</a><br>
-      <span id="jinC">3</span> = <a href="#" onclick="rebindJin()">Jin (人)</a><br>
+      <span id="tenC">1</span> = <a href="#" onclick="rebindTen()">Ten</a><br>
+      <span id="chiC">2</span> = <a href="#" onclick="rebindChi()">Chi</a><br>
+      <span id="jinC">3</span> = <a href="#" onclick="rebindJin()">Jin</a><br>
       <span id="ninC">4</span> = <a href="#" onclick="rebindNin()">Ninjutsu</a><br>
       <br>
       <br>
@@ -32,6 +33,7 @@
       var mudras = [];
       var displayMudras = [];
       var effect = '';
+      var image = '';
       var tenBind = 49;
       var tenChar = '1';
       var chiBind = 50;
@@ -75,19 +77,19 @@
           console.log(e.keyCode);
           if (mudras.length < 3){
             mudras.push('ten');
-            displayMudras.push('<span style="text-shadow: 0 0 0.2em #00CCFF">天</span>');
+            displayMudras.push('<img src="ten.png" width="40" height="40" />');
           }
         }
         else if (e.keyCode == chiBind ){
           if (mudras.length < 3){
             mudras.push('chi');
-            displayMudras.push('<span style="text-shadow: 0 0 0.2em #FF6600">地</span>');
+            displayMudras.push('<img src="chi.png" width="40" height="40"/>');
           }
         }
         else if (e.keyCode == jinBind ){
           if (mudras.length < 3){
             mudras.push('jin');
-            displayMudras.push('<span style="text-shadow: 0 0 0.2em #FFCC00">人</span>');
+            displayMudras.push('<img src="jin.png" width="40" height="40" />');
           }
         }
         else if (e.keyCode == ninBind ){
@@ -118,19 +120,23 @@
       function checkNinjutsu(){
         if (mudras.length == 1){
           effect = 'Fuma Shuriken';
+          image = '<img src="fuma.png" width="40" height="40" style="vertical-align: center"/>';
         }
         else if (mudras.length == 2){
           if ((mudras[0] === 'chi' && mudras[1] === 'ten') ||
               (mudras[0] === 'jin' && mudras[1] === 'ten')){
             effect = 'Katon';
+            image = '<img src="katon.png" width="40" height="40" style="vertical-align: center"/>';
           }
           else if ((mudras[0] === 'ten' && mudras[1] === 'chi') ||
                    (mudras[0] === 'jin' && mudras[1] === 'chi')){
             effect = 'Raiton';
+            image = '<img src="raiton.png" width="40" height="40" style="vertical-align: center"/>';
           }
           else if ((mudras[0] === 'ten' && mudras[1] === 'jin') ||
                    (mudras[0] === 'chi' && mudras[1] === 'jin')){
             effect = 'Hyoton';
+            image = '<img src="hyoton.png" width="40" height="40" style="vertical-align: center"/>';
           }
           else{
             effect = 'Rabbit Medium';
@@ -140,17 +146,21 @@
           if ((mudras[0] === 'jin' && mudras[1] === 'chi' && mudras[2] === 'ten') ||
               (mudras[0] === 'chi' && mudras[1] === 'jin' && mudras[2] === 'ten')){
             effect = 'Huton';
+            image = '<img src="huton.png" width="40" height="40" style="vertical-align: center"/>';
           }
           else if ((mudras[0] === 'ten' && mudras[1] === 'jin' && mudras[2] === 'chi') ||
                    (mudras[0] === 'jin' && mudras[1] === 'ten' && mudras[2] === 'chi')){
             effect = 'Doton';
+            image = '<img src="doton.png" width="40" height="40" style="vertical-align: center"/>';
           }
           else if ((mudras[0] === 'ten' && mudras[1] === 'chi' && mudras[2] === 'jin') ||
                    (mudras[0] === 'chi' && mudras[1] === 'ten' && mudras[2] === 'jin')){
             effect = 'Suiton';
+            image = '<img src="suiton.png" width="40" height="40" style="vertical-align: center"/>';
           }
           else{
             effect = 'Rabbit Medium';
+            image = '<img src="rabbit.png" width="40" height="40" style="vertical-align: center"/>';
           }
         }
         if (effect == 'Rabbit Medium'){
@@ -205,6 +215,7 @@
         }
 
         document.getElementById("effect").innerHTML = effect;
+        document.getElementById("image").innerHTML = image;
         console.log(JSON.stringify(mudras));
         console.log(effect);
         mudras = [];
