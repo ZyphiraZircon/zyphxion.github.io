@@ -92,11 +92,6 @@ markPageApp.config(function ($routeProvider) {
 				controller: 'LoadingController',
 				templateUrl:'partials/Projects/GameJams.html'
 			})
-		.when ('/ninjutsu',
-			{
-				controller: 'LoadingController',
-				templateUrl:'ninjutsu/index.html'
-			})
 		.otherwise({redirectTo: '/home' });
 });
 
