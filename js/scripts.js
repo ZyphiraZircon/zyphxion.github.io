@@ -92,6 +92,11 @@ markPageApp.config(function ($routeProvider) {
 				controller: 'LoadingController',
 				templateUrl:'partials/Projects/GameJams.html'
 			})
+		.when ('/keystoke',
+			{
+				controller: 'LoadingController',
+				templateUrl:'partials/Work/Keystoke.html'
+			})
 		.otherwise({redirectTo: '/home' });
 });
 
