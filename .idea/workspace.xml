@@ -20,13 +20,13 @@
       <file leaf-file-name="toastr.min.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/toastr.min.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="90">
+              <caret line="6" column="7755" lean-forward="false" selection-start-line="6" selection-start-column="7755" selection-end-line="6" selection-end-column="7755" />
               <folding>
-                <element signature="e#8936#14508#2" expanded="true" />
-                <element signature="e#14566#15353#2" expanded="true" />
-                <element signature="e#15413#15900#2" expanded="true" />
-                <element signature="e#15960#16675#2" expanded="true" />
+                <element signature="e#8936#14507#2" expanded="true" />
+                <element signature="e#14565#15352#2" expanded="true" />
+                <element signature="e#15412#15899#2" expanded="true" />
+                <element signature="e#15959#16674#2" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -135,12 +135,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1557960343713</updated>
-      <workItem from="1557960345238" duration="1218000" />
+      <workItem from="1557960345238" duration="1297000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1218000" />
+    <option name="totallyTimeSpent" value="1297000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -185,13 +185,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/toastr.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="90">
+          <caret line="6" column="7755" lean-forward="false" selection-start-line="6" selection-start-column="7755" selection-end-line="6" selection-end-column="7755" />
           <folding>
-            <element signature="e#8936#14508#2" expanded="true" />
-            <element signature="e#14566#15353#2" expanded="true" />
-            <element signature="e#15413#15900#2" expanded="true" />
-            <element signature="e#15960#16675#2" expanded="true" />
+            <element signature="e#8936#14507#2" expanded="true" />
+            <element signature="e#14565#15352#2" expanded="true" />
+            <element signature="e#15412#15899#2" expanded="true" />
+            <element signature="e#15959#16674#2" expanded="true" />
           </folding>
         </state>
       </provider>
