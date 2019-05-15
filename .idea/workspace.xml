@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="789a4246-c9b0-4d65-b05b-a0c7298ccb46" name="Default" comment="" />
+    <list default="true" id="789a4246-c9b0-4d65-b05b-a0c7298ccb46" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/toastr.min.css" afterPath="$PROJECT_DIR$/css/toastr.min.css" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -18,17 +20,12 @@
       <file leaf-file-name="toastr.min.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/toastr.min.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="1802" lean-forward="false" selection-start-line="10" selection-start-column="1802" selection-end-line="10" selection-end-column="1802" />
+            <state relative-caret-position="75">
+              <caret line="5" column="2187" lean-forward="true" selection-start-line="5" selection-start-column="2187" selection-end-line="5" selection-end-column="2187" />
               <folding>
-                <element signature="e#2562#3309#2" expanded="true" />
-                <element signature="e#3367#4154#2" expanded="true" />
-                <element signature="e#4214#4701#2" expanded="true" />
-                <element signature="e#4761#5476#2" expanded="true" />
-                <element signature="e#9213#9960#2" expanded="true" />
-                <element signature="e#10018#10805#2" expanded="true" />
-                <element signature="e#10865#11352#2" expanded="true" />
-                <element signature="e#11412#12127#2" expanded="true" />
+                <element signature="e#9032#9819#2" expanded="true" />
+                <element signature="e#9879#10366#2" expanded="true" />
+                <element signature="e#10426#11141#2" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -39,6 +36,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>opacity</find>
+      <find>toast-info</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -136,12 +134,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1557960343713</updated>
-      <workItem from="1557960345238" duration="132000" />
+      <workItem from="1557960345238" duration="659000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132000" />
+    <option name="totallyTimeSpent" value="659000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -186,17 +184,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/toastr.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="1802" lean-forward="false" selection-start-line="10" selection-start-column="1802" selection-end-line="10" selection-end-column="1802" />
+        <state relative-caret-position="75">
+          <caret line="5" column="2187" lean-forward="true" selection-start-line="5" selection-start-column="2187" selection-end-line="5" selection-end-column="2187" />
           <folding>
-            <element signature="e#2562#3309#2" expanded="true" />
-            <element signature="e#3367#4154#2" expanded="true" />
-            <element signature="e#4214#4701#2" expanded="true" />
-            <element signature="e#4761#5476#2" expanded="true" />
-            <element signature="e#9213#9960#2" expanded="true" />
-            <element signature="e#10018#10805#2" expanded="true" />
-            <element signature="e#10865#11352#2" expanded="true" />
-            <element signature="e#11412#12127#2" expanded="true" />
+            <element signature="e#9032#9819#2" expanded="true" />
+            <element signature="e#9879#10366#2" expanded="true" />
+            <element signature="e#10426#11141#2" expanded="true" />
           </folding>
         </state>
       </provider>
