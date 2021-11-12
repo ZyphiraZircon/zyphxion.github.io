@@ -1,5 +1,5 @@
-//AUTHOR:  Mark Escobedo
-//EMAIL:   mark@markescobedo.com
+//AUTHOR:  Mae Escobedo
+//EMAIL:   zyphira25@gmail.com
 //DATE:    2014-04-18
 
 $(document).ready(function(){
