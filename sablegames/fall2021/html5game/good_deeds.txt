@@ -52,6 +52,4 @@ rescued cat from tree
 1
 saved orphans from burning building
 1
-switched to tank in order to speed up the queue time for a friend
-1
 eof
